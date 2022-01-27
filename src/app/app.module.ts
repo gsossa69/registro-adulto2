@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,12 +11,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormulariopComponent
+    FormulariopComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,9 +28,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatBottomSheetModule,
     MatFormFieldModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
