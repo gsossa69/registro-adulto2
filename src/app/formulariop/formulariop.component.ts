@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-formulariop',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulariop.component.css']
 })
 export class FormulariopComponent implements OnInit {
+  email = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor() { }
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'complete este campo';
+    }
 
+    return this.email.hasError('email') ? 'no es valido' : '';
+  }
   ngOnInit(): void {
   }
 

@@ -20,27 +20,45 @@
                <form fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="25px grid" >
                     <mat-form-field fxFlex="50" class="example-full-width columna1" appearance="fill">
                       <mat-label>Nombre y apellido</mat-label>
-                      <input matInput placeholder="" value="">
+                      <input matInput placeholder="" FormContro="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                     </mat-form-field>
                     <mat-form-field fxFlex="50" class="example-full-width" appearance="fill">
                         <mat-label>Fecha de nacimiento</mat-label>
-                        <input matInput type="date" placeholder="" value="">
+                        <input matInput type="date" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50" class="example-full-width" appearance="fill">
-                        <mat-label>Tipo de identificacion</mat-label>
-                        <input matInput placeholder="" value="C.C">
+                        <mat-label>Tipo de documento</mat-label>
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50" class="example-full-width" appearance="fill">
                         <mat-label>Numero de identificacion</mat-label>
-                        <input matInput type="number" placeholder="" value="">
+                        <input matInput type="number" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  appearance="fill">
                         <mat-label>Talla</mat-label>
-                        <input matInput type="number" placeholder="" value="">
+                        <input matInput type="number" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                       <mat-label>Sexo</mat-label>
-                      <input matInput placeholder="" value="">
+                      <mat-select required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        <mat-option value="option">Option 1</mat-option>
+                        <mat-option value="option">Option 2</mat-option>
+                        <mat-option value="option">Option 3</mat-option>
+                        <mat-option value="option">Option 4</mat-option>
+                        <mat-option value="option">Option 5</mat-option>
+                      </mat-select>
                     </mat-form-field>
                     <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                       <mat-label>Peso</mat-label>
@@ -54,15 +72,24 @@
                     </div>
                     <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Persona responsable</mat-label>
-                        <input matInput placeholder="" value="">
+                        <input matInput placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
-                        <mat-label>parentezco</mat-label>
-                        <input matInput placeholder="" value="">
+                        <mat-label>Parentesco</mat-label>
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Telefono responsable</mat-label>
-                        <input matInput type="number" placeholder="" value="">
+                        <input matInput type="number" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Numero secundario</mat-label>
@@ -70,23 +97,33 @@
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Email</mat-label>
-                        <input matInput type="email" placeholder="" value="">
+                        <input matInput type="email" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Segunda persona responsable</mat-label>
-                        <input matInput placeholder="" value="">
+                        <input matInput placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Parentezco</mat-label>
-                        <input matInput placeholder="" value="">
+                        <mat-select>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Telefono</mat-label>
-                        <input matInput type="number" placeholder="" value="">
+                        <input matInput type="number" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <mat-form-field fxFlex="100"  class="example-full-width" appearance="fill">
                         <mat-label>Email</mat-label>
-                        <input matInput type="email" placeholder="" value="" >
+                        <input matInput type="email" placeholder="" FormContro="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                       <div fxFlex="100">
                           <br>
@@ -95,7 +132,14 @@
                       </div>
                       <mat-form-field fxFlex="100"  class="example-full-width" appearance="fill">
                         <mat-label>Departamento de residencia</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Direccion</mat-label>
@@ -103,7 +147,14 @@
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Municipio</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <div fxFlex="100">
                           <br>
@@ -112,27 +163,69 @@
                       </div>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Tiene EPS</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Cual</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Antecedentes medicos</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Antecedentes quirurjicos</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Medicacion actual</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                       <mat-form-field fxFlex="50"  class="example-full-width" appearance="fill">
                         <mat-label>Alergias</mat-label>
-                        <input matInput type="text" placeholder="" value="">
+                        <mat-select required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                          <mat-option value="option">Option 1</mat-option>
+                          <mat-option value="option">Option 2</mat-option>
+                          <mat-option value="option">Option 3</mat-option>
+                          <mat-option value="option">Option 4</mat-option>
+                          <mat-option value="option">Option 5</mat-option>
+                        </mat-select>
                       </mat-form-field>
                 </form>
             </div>
